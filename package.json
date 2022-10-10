@@ -77,12 +77,15 @@
     "webpack-cli": "^4.10.0",
     "zx": "^7.1.1"
   },
+  "lazyDependencies": {
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/zloirock/core-js.git"
   },
   "scripts": {
+    "zxi": "zx scripts/zxi.mjs",
     "init": "run-s generate-indexes clean-and-copy build-compat",
     "clean-and-copy": "zx scripts/clean-and-copy.mjs",
     "build-compat": "run-s build-compat-data build-compat-entries build-compat-modules-by-versions",

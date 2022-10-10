@@ -13,6 +13,7 @@ const pluginQUnit = require('eslint-plugin-qunit');
 const pluginRegExp = require('eslint-plugin-regexp');
 const pluginSonarJS = require('eslint-plugin-sonarjs');
 const pluginUnicorn = require('eslint-plugin-unicorn');
+const { lazyDependencies } = require('./package');
 
 const PACKAGES_NODE_VERSIONS = require('core-js-builder/package').engines.node;
 const DEV_NODE_VERSIONS = '^16.13';
@@ -323,7 +324,10 @@ const base = {
   // forbid cycle dependencies
   'import/no-cycle': [ERROR, { commonjs: true }],
   // ensure imports point to files / modules that can be resolved
-  'import/no-unresolved': [ERROR, { commonjs: true }],
+  'import/no-unresolved': [ERROR, {
+    commonjs: true,
+    ignore: Object.keys(lazyDependencies).map(it => `^${ it }`),
+  }],
   // forbid import of modules using absolute paths
   'import/no-absolute-path': ERROR,
   // forbid `require()` calls with expressions

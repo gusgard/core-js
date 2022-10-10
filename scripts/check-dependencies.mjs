@@ -21,6 +21,7 @@ await Promise.all((await glob(['package.json', 'packages/*/package.json'])).map(
     dependencies: {
       ...pkg.dependencies,
       ...pkg.devDependencies,
+      ...pkg.lazyDependencies,
     },
   });
   const ignore = path === 'package.json' ? ignoreEverywhere : ignoreInPackages;
