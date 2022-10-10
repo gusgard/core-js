@@ -55,7 +55,6 @@
     "eslint-plugin-unicorn": "^44.0.2",
     "globals": "^13.17.0",
     "jsonc-eslint-parser": "^2.1.0",
-    "jszip": "^3.10.1",
     "karma": "^6.4.1",
     "karma-phantomjs-launcher": "~1.0.4",
     "karma-qunit": "^4.1.2",
@@ -63,7 +62,6 @@
     "moon-unit": "0.2.2",
     "npm": "8.19.2",
     "npm-run-all": "^4.1.5",
-    "p-timeout": "^6.0.0",
     "phantomjs-prebuilt": "~2.1.16",
     "playwright": "^1.27.0",
     "promises-aplus-tests": "^2.1.2",
@@ -78,6 +76,8 @@
     "zx": "^7.1.1"
   },
   "lazyDependencies": {
+    "jszip": "^3.10.1",
+    "p-timeout": "^6.0.0"
   },
   "license": "MIT",
   "repository": {
@@ -152,7 +152,7 @@
     "clean-dependencies": "node scripts/clean-dependencies.mjs",
     "refresh": "npm run clean-dependencies && npm it",
     "downloads": "zx scripts/downloads-by-versions.mjs",
-    "usage": "zx scripts/usage.mjs",
+    "usage": "npm run zxi scripts/usage.mjs",
     "update-version": "zx scripts/update-version.mjs && run-s bundle-deno build-compat-data copy-compat-table",
     "publish": "npm publish --workspaces",
     "c": "npm run check",
