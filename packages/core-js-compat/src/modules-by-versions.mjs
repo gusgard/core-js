@@ -177,4 +177,7 @@ export default {
     'esnext.set.union.v2',
     'esnext.string.dedent',
   ],
+  3.28: [
+    'web.url-search-params.size',
+  ],
 };

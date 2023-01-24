@@ -2421,6 +2421,8 @@ export const data = {
     node: '10.0',
     safari: '14.0',
   },
+  'web.url-search-params.size': {
+  },
 };
 
 export const renamed = new Map([
