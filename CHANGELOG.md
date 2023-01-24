@@ -1,6 +1,16 @@
 ## Changelog
 ##### Unreleased
-- Nothing
+- [Change `Array` by copy proposal](https://github.com/tc39/proposal-change-array-by-copy):
+  - Methods:
+    - `Array.prototype.toReversed`
+    - `Array.prototype.toSorted`
+    - `Array.prototype.toSpliced`
+    - `Array.prototype.with`
+    - `%TypedArray%.prototype.toReversed`
+    - `%TypedArray%.prototype.toSorted`
+    - `%TypedArray%.prototype.with`
+  - Moved to stable ES, January 2023 TC39 meeting
+  - Added `es.` namespace modules, `/es/` and `/stable/` namespaces entries
 
 ##### [3.27.2 - 2023.01.19](https://github.com/zloirock/core-js/releases/tag/v3.27.2)
 - [`Set` methods proposal](https://github.com/tc39/proposal-set-methods) updates:
