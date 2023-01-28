@@ -1,5 +1,7 @@
 ## Changelog
 ##### Unreleased
+- [Iterator Helpers](https://github.com/tc39/proposal-iterator-helpers) proposal:
+  - Allowed interleaved mapping in `AsyncIterator` helpers, [proposal-iterator-helpers/262](https://github.com/tc39/proposal-iterator-helpers/pull/262)
 - Fixed Safari `String.prototype.toWellFormed` `ToString` conversion bug
 - Added Opera Android 73 compat data mapping
 
