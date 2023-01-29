@@ -1956,6 +1956,8 @@ export const data = {
   },
   'esnext.iterator.to-async': {
   },
+  'esnext.json.parse': {
+  },
   'esnext.map.delete-all': {
   },
   'esnext.map.emplace': {
