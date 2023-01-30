@@ -222,6 +222,12 @@ function createStringTrimMethodTest(METHOD_NAME) {
   };
 }
 
+function NATIVE_RAW_JSON() {
+  var unsafeInt = '9007199254740993';
+  var raw = JSON.rawJSON(unsafeInt);
+  return JSON.isRawJSON(raw) && JSON.stringify(raw) === unsafeInt;
+}
+
 function IMMEDIATE() {
   return setImmediate && clearImmediate && !(IS_BUN && (function () {
     var version = global.Bun.version.split('.');
@@ -1566,6 +1572,7 @@ GLOBAL.tests = {
   'esnext.iterator.to-async': function () {
     return Iterator.prototype.toAsync;
   },
+  'esnext.json.is-raw-json': NATIVE_RAW_JSON,
   'esnext.json.parse': function () {
     var unsafeInt = '9007199254740993';
     var source;
@@ -1574,6 +1581,7 @@ GLOBAL.tests = {
     });
     return source === unsafeInt;
   },
+  'esnext.json.raw-json': NATIVE_RAW_JSON,
   'esnext.map.delete-all': function () {
     return Map.prototype.deleteAll;
   },

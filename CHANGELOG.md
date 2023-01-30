@@ -1,5 +1,11 @@
 ## Changelog
 ##### Unreleased
+- Added [`JSON.parse` source text access Stage 3 proposal](https://github.com/tc39/proposal-json-parse-with-source)
+  - Methods:
+    - `JSON.parse` patched for support `source` in `reviver` function arguments
+    - `JSON.rawJSON`
+    - `JSON.isRawJSON`
+    - `JSON.stringify` patched for support `JSON.rawJSON`
 - Fixed Safari `String.prototype.toWellFormed` `ToString` conversion bug
 - Simplified internal behaviour of `{ AsyncDisposableStack, DisposableStack }.prototype.use`, [proposal-explicit-resource-management/143](https://github.com/tc39/proposal-explicit-resource-management/pull/143)
 - Improved some cases handling of array-replacer in `JSON.stringify` symbols handling fix

@@ -178,6 +178,8 @@ export default {
     'esnext.string.dedent',
   ],
   3.28: [
+    'esnext.json.is-raw-json',
     'esnext.json.parse',
+    'esnext.json.raw-json',
   ],
 };
